@@ -1,0 +1,4 @@
+{
+  "extends": "@stencil-ui/ts-config/stencil.json",
+  "include": ["src"]
+}
