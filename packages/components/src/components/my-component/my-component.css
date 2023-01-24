@@ -1,3 +1,7 @@
 :host {
   display: block;
 }
+
+.token-green {
+  color: var(--green-300);
+}
