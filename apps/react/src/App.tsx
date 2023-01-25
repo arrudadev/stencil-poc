@@ -2,6 +2,8 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 
+import { MyComponent } from '@stencil-ui/react'
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -18,7 +20,7 @@ function App() {
 
       <h1>Vite + React</h1>
 
-      <my-component name="Stencil"></my-component>
+      <MyComponent name="Arrudadev" />
 
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
