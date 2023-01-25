@@ -16,7 +16,8 @@
   ],
   "scripts": {
     "build": "stencil build --docs",
-    "dev": "stencil build --dev --watch --serve",
+    "dev": "stencil build --watch --serve",
+    "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate"
@@ -25,7 +26,6 @@
     "@stencil/core": "^2.13.0"
   },
   "devDependencies": {
-    "@stencil-ui/tokens": "*",
     "@types/jest": "^27.0.3",
     "jest": "^27.4.5",
     "jest-cli": "^27.4.5",

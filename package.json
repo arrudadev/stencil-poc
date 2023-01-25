@@ -3,10 +3,12 @@
   "private": true,
   "license": "MIT",
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "apps/*"
   ],
   "scripts": {
     "dev": "turbo run dev --parallel",
+    "start": "turbo run dev --parallel",
     "build": "turbo run build"
   },
   "devDependencies": {
