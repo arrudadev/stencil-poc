@@ -7,8 +7,8 @@
     "apps/*"
   ],
   "scripts": {
-    "dev": "turbo run dev --parallel",
-    "start": "turbo run dev --parallel",
+    "dev": "turbo run dev",
+    "start": "turbo run dev",
     "build": "turbo run build"
   },
   "devDependencies": {
