@@ -16,7 +16,10 @@ export const config: Config = {
     },
     {
       type: 'www',
-      serviceWorker: null,
+      serviceWorker: null
+    },
+    {
+      type: "dist-hydrate-script",
     },
     react({
       componentCorePackage: '@stencil-ui/stencil',

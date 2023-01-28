@@ -5,13 +5,13 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "node server.js",
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/font": "13.1.5",
     "@stencil-ui/react": "*",
     "@stencil-ui/stencil": "*",
-    "@next/font": "13.1.5",
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",

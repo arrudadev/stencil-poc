@@ -131,7 +131,7 @@ export default function Home({ text }: Props) {
 export async function getServerSideProps() {
   return {
     props: {
-      text: 'ServerSideProps'
+      text: `Arrudadev at ${new Date().getTime()}`
     }
   }
 }
