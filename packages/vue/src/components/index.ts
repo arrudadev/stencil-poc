@@ -12,3 +12,6 @@ export const MyComponent = /*@__PURE__*/ defineContainer<JSX.MyComponent>('my-co
   'name'
 ]);
 
+
+export const MyHeading = /*@__PURE__*/ defineContainer<JSX.MyHeading>('my-heading', undefined);
+

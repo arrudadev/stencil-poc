@@ -29,3 +29,24 @@ export class MyComponent {
 export declare interface MyComponent extends Components.MyComponent {}
 
 
+@ProxyCmp({
+})
+@Component({
+  selector: 'my-heading',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class MyHeading {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface MyHeading extends Components.MyHeading {}
+
+
