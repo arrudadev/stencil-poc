@@ -7,9 +7,9 @@
     "apps/*"
   ],
   "scripts": {
-    "dev": "turbo run dev",
-    "start": "turbo run dev",
-    "build": "turbo run build"
+    "dev": "turbo run dev --filter=./apps/*",
+    "stencil": "turbo run start --filter=./packages/stencil/",
+    "build": "turbo run build --filter=./packages/*"
   },
   "devDependencies": {
     "turbo": "^1.7.0"
