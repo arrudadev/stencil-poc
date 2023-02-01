@@ -10,10 +10,10 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
     <my-text>Type your name:</my-text>
 
-    <my-input placeholder='Type...'></my-input>
+    <my-input id="my-input" placeholder='Type...'></my-input>
 
     <div style="margin-top: 10px;">
-      <my-component name="Arrudadev"></my-component>
+      <my-component id="my-component"></my-component>
     </div>
   </div>
 `
