@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular';
+  name = 'Angular';
+
+  onInputChange = (event: any) => {
+    const value = event.detail;
+
+    this.name = value
+  }
 }
