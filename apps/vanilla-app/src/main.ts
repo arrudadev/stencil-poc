@@ -1,6 +1,4 @@
 import './style.css'
-import typescriptLogo from './typescript.svg'
-import { setupCounter } from './counter'
 
 import '@stencil-ui/stencil/dist/components/components.css';
 
@@ -8,26 +6,17 @@ import { applyPolyfills, defineCustomElements } from '@stencil-ui/stencil/loader
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
+    <my-heading>Vite + JS Vanila + Web components</my-heading>
 
-    <my-component name="Arrudadev"></my-component>
+    <my-text>Type your name:</my-text>
 
-    <div class="card">
-      <button id="counter" type="button"></button>
+    <my-input placeholder='Type...'></my-input>
+
+    <div style="margin-top: 10px;">
+      <my-component name="Arrudadev"></my-component>
     </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
   </div>
 `
-
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
 
 applyPolyfills().then(() => {
   defineCustomElements();

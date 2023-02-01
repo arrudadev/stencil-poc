@@ -1,7 +1,15 @@
 {{page-title "EmberApp"}}
 
-<h1>Ember App</h1>
+<main class="app">
+  <my-heading>Ember + Web components</my-heading>
 
-<my-component name="Arrudadev" />
+  <my-text>Type your name:</my-text>
+
+  <my-input placeholder="Type..."></my-input>
+
+  <div style="margin-top: 10px;">
+    <my-component name="Arrudadev"></my-component>
+  </div>
+</main>
 
 {{outlet}}
