@@ -1,40 +1,26 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+
 import './App.css'
 
-import { MyComponent, MyHeading } from '@stencil-ui/react'
+import { MyInputCustomEvent } from '@stencil-ui/stencil'
+import { MyComponent, MyHeading, MyInput, MyText } from '@stencil-ui/react'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [name, setName] = useState('')
+
+  function handleChangeName({ detail: value }: MyInputCustomEvent<string>) {
+    setName(value)
+  }
 
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
+      <MyHeading>Vite + React + Web components</MyHeading>
 
-      <h1>Vite + React</h1>
+      <MyText>Type your name:</MyText>
 
-      <MyHeading>My Heading</MyHeading>
+      <MyInput placeholder='Type...' onChangeInput={handleChangeName} />
 
-      <MyComponent name="Stencil" />
-
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      { name && <MyComponent name={name} /> }
     </div>
   )
 }

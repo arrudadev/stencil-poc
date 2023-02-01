@@ -1,9 +1,9 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, Prop, h, Host } from '@stencil/core';
 
 @Component({
   tag: 'my-component',
   styleUrl: 'my-component.css',
-  shadow: true,
+  shadow: true
 })
 export class MyComponent {
   /**
@@ -12,6 +12,10 @@ export class MyComponent {
   @Prop() name: string;
 
   render() {
-    return <div class="token-green">Hello, World! I'm {this.name}</div>;
+    return (
+      <Host id="my-component">
+        <div class="token-green">Hello, World! I'm {this.name}</div>
+      </Host>
+    )
   }
 }
